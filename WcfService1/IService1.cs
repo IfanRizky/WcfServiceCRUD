@@ -14,24 +14,24 @@ namespace WcfService1
     public interface IService1
     {
         [OperationContract]
-        string Insert(InsertUser user);
+        string Insert(InsertUser user); //membuat method insert
 
         [OperationContract]
-        GetTestData GetInfo();
+        GetTestData GetInfo(); //membuat method getinfo
 
         [OperationContract]
-        string Update(UpdateUser u);
+        string Update(UpdateUser u); //membuat method update
 
         [OperationContract]
-        string Delete(DeleteUser d);
+        string Delete(DeleteUser d); //membuat method delete
         // TODO: Add your service operations here
     }
 
     [DataContract]
-    public class GetTestData
+    public class GetTestData //membuat class getTestData 
     {
         [DataMember]
-        public DataTable userTable
+        public DataTable userTable //membuat properties userTable
         {
             get;
             set;
@@ -41,20 +41,20 @@ namespace WcfService1
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.
     [DataContract]
-    public class InsertUser
+    public class InsertUser //membuat class InsertUser 
     {
         string name = string.Empty;
         string email = string.Empty;
 
         [DataMember]
-        public string Name
+        public string Name //membuat properties Name
         {
             get { return name; }
             set { name = value; }
         }
 
         [DataMember]
-        public string Email
+        public string Email //membuat properties Email
         {
             get { return email; }
             set { email = value; }
@@ -62,28 +62,28 @@ namespace WcfService1
     }
 
     [DataContract]
-    public class UpdateUser
+    public class UpdateUser //membuat class UpdateUser 
     {
         int uID;
         string name;
         string email;
 
         [DataMember]
-        public int UID
+        public int UID //membuat properties UID
         {
            get { return uID; }
            set { uID = value; }
         }
 
         [DataMember]
-        public string Name
+        public string Name //membuat properties Name
         {
             get { return name; }
             set { name = value; }
         }
 
         [DataMember]
-        public string Email
+        public string Email //membuat properties Email
         {
             get { return email; }
             set { email = value; }
@@ -91,12 +91,12 @@ namespace WcfService1
     }
 
     [DataContract]
-    public class DeleteUser
+    public class DeleteUser //membuat class DeleteUser 
     {
         int uID;
 
         [DataMember]
-        public int UID
+        public int UID //membuat properties UID
         {
             get { return uID; }
             set { uID = value; }

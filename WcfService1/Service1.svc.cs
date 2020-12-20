@@ -35,11 +35,6 @@ namespace WcfService1
                 message = "Successfully Inserted";
             }
 
-            else if (user.Name == null && user.Email == null)
-            {
-                message = "Failed to Insert";
-            }
-
             else
             {
                 message = "Failed to Insert";
